@@ -1,0 +1,10 @@
+.iten-list{
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+place-content: center;
+gap: 20px;
+}
+
+.iten{
+    border: 2px black solid;
+}
