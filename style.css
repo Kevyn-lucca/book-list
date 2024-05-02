@@ -17,12 +17,22 @@
         overflow: auto;
     }
     
+    .delete-self{
+      background-color: white;
+      border: none;
+      color: grey;
+      margin-left: 19.5rem;
+    }
+
+    .delete-self:hover{
+      cursor: pointer;
+    }
 
     .iten > p{
         text-align: left;
         margin-left: 5px;
         white-space: pre-wrap;
-        overflow: scroll;
+        overflow: auto;
     }
     
     .iten > h3{
@@ -71,8 +81,19 @@
         display: flex;
         place-content: center;
       }
+
+      .header > button{
+        background-color: blue;
+        border: none;
+        padding: 8px;
+        color: white;
+        border-radius: 1rem;
+      }
+
+      .header > button:hover{
+        cursor: pointer;
+      }
       
-      /* The sticky class is added to the header with JS when it reaches its scroll position */
       .sticky {
         display: flex;
         place-content: center;
@@ -85,6 +106,11 @@
         -webkit-backdrop-filter: blur(10.4px);
       }
       
-      .sticky + .iten {
+      .sticky + .header {
         padding-top: 102px;
+      }
+
+      .read{
+        background-color: green;
+        padding: 10px;
       }
