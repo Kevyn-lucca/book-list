@@ -1,10 +1,90 @@
 .iten-list{
-display: grid;
-grid-template-columns: repeat(6, 1fr);
-place-content: center;
-gap: 20px;
-}
+    display: grid;
+    resize: both;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    place-content: center;
+    gap: 20px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    }
+    
+    .iten{
+        text-align: center;
+        border: 2px black solid;
+        background-size: cover;
+        background-repeat: no-repeat;
+        backface-visibility: visible;
+        overflow: auto;
+    }
+    
 
-.iten{
-    border: 2px black solid;
-}
+    .iten > p{
+        text-align: left;
+        margin-left: 5px;
+        white-space: pre-wrap;
+        overflow: scroll;
+    }
+    
+    .iten > h3{
+        margin-bottom: 0;
+        margin-top: 8px;
+    }
+    
+    .iten > h4{
+        margin-bottom: 0;
+    }
+    
+    .iten> span{
+        font-size: 10px;
+        font-weight: lighter;
+        font-style: italic;
+    
+    }
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    #favDialog > form > div > button {
+        margin-left: 20px;
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 8px
+      }
+      
+    #desc {
+        height: 110px;
+        margin-bottom: 10px;
+      }
+    #showDialog{
+        display: flex;
+        place-content: center;
+    }  
+    
+    .header {
+        padding: 10px;
+        margin-bottom: 10px;
+        color: #f1f1f1;
+        display: flex;
+        place-content: center;
+      }
+      
+      /* The sticky class is added to the header with JS when it reaches its scroll position */
+      .sticky {
+        display: flex;
+        place-content: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.19);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10.4px);
+        -webkit-backdrop-filter: blur(10.4px);
+      }
+      
+      .sticky + .iten {
+        padding-top: 102px;
+      }
