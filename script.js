@@ -14,15 +14,20 @@ function addBookToLibrary(Book) {
   const ItenList = document.querySelector(".iten-list");
   // Cria um novo elemento div para representar o livro
   const div = document.createElement("div");
+
   div.classList.add("iten"); // Adiciona a classe "iten" à div
   div.style.backgroundImage = `url('${Book.BackGround}')`; // Define a imagem de fundo
+
   // Define o conteúdo HTML da div
   div.innerHTML = `
+    <div class = "iten-text">
     <button class="delete-self">X</button>
+    <h4>${Book.author}</h4>
     <h3>${Book.title}</h3>
     <span>Páginas: ${Book.PageNum}</span>
     <p>${Book.Description}</p>
     <button style="padding: 10px; border: none; margin-bottom: 10px" class="not-read"></button>
+    </div>
   `;
   ItenList.appendChild(div); // Adiciona a div à lista de itens da biblioteca
 

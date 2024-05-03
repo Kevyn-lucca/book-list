@@ -1,3 +1,11 @@
+*{
+  font-family: "Roboto", sans-serif;
+}
+
+body{
+  background-color: #D8D8D8;
+}
+
 .iten-list{
     display: grid;
     resize: both;
@@ -10,56 +18,72 @@
     
     .iten{
         text-align: center;
-        border: 2px black solid;
-        background-size: cover;
+        border: 1rem;
+        background-size: contain;
+        background-position: center center;
         background-repeat: no-repeat;
+        border-radius: 10px;
         backface-visibility: visible;
         overflow: auto;
     }
-    
+
     .delete-self{
       background-color: white;
       border: none;
-      color: grey;
-      margin-left: 19.5rem;
+      color: black;
+      margin-left: 20.2rem;
+      margin-top:2px ;
     }
-
+    
     .delete-self:hover{
       cursor: pointer;
     }
 
-    .iten > p{
+    .iten-text{
+      opacity: 0;
+      color: white;
+    }
+
+    .iten-text:hover{
+      transition: 0.5s;
+      opacity: 1;
+    }
+
+    .iten-text> p{
         text-align: left;
         margin-left: 5px;
         white-space: pre-wrap;
         overflow: auto;
     }
     
-    .iten > h3{
+    .iten-text> h3{
         margin-bottom: 0;
         margin-top: 8px;
     }
     
-    .iten > h4{
+    .iten-text> h4{
         margin-bottom: 0;
     }
     
-    .iten> span{
+    .iten-text> span{
         font-size: 10px;
-        font-weight: lighter;
         font-style: italic;
-    
     }
     
     form{
         display: flex;
         flex-direction: column;
         gap: 5px;
+        background-color: #f7f7f7;
+    }
+
+    #favDialog{
+      background-color: #f7f7f7;
     }
     
     #favDialog > form > div > button {
         margin-left: 20px;
-        background-color: black;
+        background-color: #3C5B6F;
         border: none;
         color: white;
         padding: 8px
@@ -77,30 +101,37 @@
     .header {
         padding: 10px;
         margin-bottom: 10px;
-        color: #f1f1f1;
+        background-color: #153448;
         display: flex;
         place-content: center;
+        
       }
 
       .header > button{
-        background-color: blue;
+        background-color: #3C5B6F;
         border: none;
         padding: 8px;
-        color: white;
         border-radius: 1rem;
+        color: white;
       }
 
       .header > button:hover{
         cursor: pointer;
       }
-      
+
+      .iten:hover{
+        transition: 0.5s;
+        background-color: rgba(0, 0, 0, 0.6); /* Cor escura semi-transparente */
+        background-blend-mode: darken;
+        }
+
       .sticky {
         display: flex;
         place-content: center;
         position: fixed;
         top: 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.19);
+        background: rgba(21, 52, 72, 0.6);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(10.4px);
         -webkit-backdrop-filter: blur(10.4px);
@@ -113,4 +144,8 @@
       .read{
         background-color: green;
         padding: 10px;
+      }
+
+      .not-read:hover{
+        cursor: pointer;
       }
