@@ -5,6 +5,7 @@
 <ul>
   <li>HTML5</li>
   <li>CSS3</li>
+  <li>JavaScript</li>
   <li>Node.js</li>
   <li>npm</li>
   <li>Git</li>
